@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Submit Recipe</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <style>
+            body {
+                background-color: bisque;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <p><a href="index.html">Home</a></p>
+            <p><a href="recipe.html">Add A New Recipe</a></p>
+            <p><a href="search.php">Look For A Recipe</a></p>
+            <p><a href="display.php">Display All Recipes</a></p>
+        </div>
+        <h1>Submit A Recipe</h1>
+        <div class="form">
+        <form action='submit_recipe.php' method='post'>
+        <p>Please fill in all fields and click submit.</p>
+        <label for="name">Recipe:</label>
+        <input type="text" name="name" required><br><br>
+        
+        <label for="ingredients">Ingredients:</label><br>
+        <textarea name="ingredients" rows="5" cols="40" required></textarea><br><br>
+        
+        <label for="instructions">Instructions:</label><br>
+        <textarea name="instructions" rows="10" cols="40" required></textarea><br><br>
+        
+        <label for="cooking_time">Cooking Time (in minutes):</label>
+        <input type="number" name="cooking_time" required><br><br>
+        
+        <input type="submit" name = 'submit' value="Submit">
+        </form>
+        </div>
+
+    </body>
+</html>
